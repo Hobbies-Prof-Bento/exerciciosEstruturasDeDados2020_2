@@ -13,17 +13,16 @@
 int main(){	
 	setlocale(LC_ALL,"portuguese");
 	
-	int m,a=1;
+	int m;
 	
 	printf("## WELCOME ##\n\nPor gentileza digite o número de linhas: ");
 	scanf("%d",&m);
 	
 	printf("\n\n");	
 	for(int i=0;i<m;i++){
-		for(int j=0;j<a;j++){
-			printf("*");	
+		for(int j=0;j<i;j++){
+			printf("* ");	
 		}
-		a++;
 		printf("\n");		
 	}
 	return 0;

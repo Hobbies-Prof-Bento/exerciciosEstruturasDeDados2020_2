@@ -11,6 +11,7 @@ int main(){
 	
 	int vetor1[10];
 	int vetor2[9];
+	
 	for(int i=0;i<10;i++){
 		vetor1[i]=pow(2,i);		
 	}
