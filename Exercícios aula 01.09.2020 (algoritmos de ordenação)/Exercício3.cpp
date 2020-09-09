@@ -27,7 +27,7 @@ void imprimeVetor(){
 }
 
 void bubbleSort(){
-	int contComparacao=0, contTroca=0;
+	contComparacao=0; contTroca=0;
 	int vetorAux[10]={0,0,0,0,0,0,0,0,0,0};
 	int auxiliar,j, verificador = 1, soma =0,size=9;	
 	
@@ -69,52 +69,49 @@ void bubbleSort(){
 int main(){
 	setlocale(LC_ALL,"portuguese");
 	
-	int opcao;
-		
-	system("cls");
+	while(1){
+		int opcao;
 			
-	printf("BEM-VINDO");
-	printf("\n\nPor gentileza escolha uma opção:");
-	printf("\n1-Preenche o vetor \n2-Ordena o vetor por Bubble Sort \n3-Desempenho \n4-Imprime o vetor \n5-sair\n\nSeleção: ");
-	scanf("%d",&opcao);	
-		
-	switch(opcao){
-		case 1:
-			preencheVetor();
-			main();
-			break;			
+		system("cls");
 				
-		case 2:
-			bubbleSort();
-			main();
-			break;
+		printf("BEM-VINDO");
+		printf("\n\nPor gentileza escolha uma opção:");
+		printf("\n1-Preenche o vetor \n2-Ordena o vetor por Bubble Sort \n3-Desempenho \n4-Imprime o vetor \n5-sair\n\nSeleção: ");
+		scanf("%d",&opcao);	
 			
-		case 3:
-			printf("\n\nDESEMPENHO");
-			printf("\nNumero de comparações: %d",contComparacao);
-			printf("\nNumero de trocas: %d",contTroca);
-			
-			printf("\n\n\n");
-			system("pause");
-			main();
-			break;
-			
-		case 4:
-			imprimeVetor();
-			main();
-			break;
-			
-		case 5:
-			return 0;
-			break;
-			
-		default:
-			printf("\nOpção incorreta, aperte ENTER e digite novamente!!");
-			printf("\n\n\n");
-			system("pause");
-			main();								
-	}	
-	
+		switch(opcao){
+			case 1:
+				preencheVetor();
+				break;			
+					
+			case 2:
+				bubbleSort();
+				break;
+				
+			case 3:
+				printf("\n\nDESEMPENHO");
+				printf("\nNumero de comparações: %d",contComparacao);
+				printf("\nNumero de trocas: %d",contTroca);
+				
+				printf("\n\n\n");
+				system("pause");
+				break;
+				
+			case 4:
+				imprimeVetor();
+				break;
+				
+			case 5:
+				return 0;
+				break;
+				
+			default:
+				printf("\nOpção incorreta, aperte ENTER e digite novamente!!");
+				printf("\n\n\n");
+				system("pause");
+				break;					
+		}	
+	}
 	
 	return 0;
 }

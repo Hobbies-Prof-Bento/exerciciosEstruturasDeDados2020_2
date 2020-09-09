@@ -35,7 +35,8 @@ void imprimeVetor(){
 }
 
 void bubbleSort(){
-	int contComparacao=0, contTroca=0;
+	contComparacao=0;
+	contTroca=0;
 	int vetorAux[10]={0,0,0,0,0,0,0,0,0,0};
 	int auxiliar,j, verificador = 1, soma =0,size=9;	
 	
@@ -75,7 +76,8 @@ void bubbleSort(){
 }
 
 void selectionSort(){
-	int contComparacao=0, contTroca=0;
+	contComparacao=0;
+	contTroca=0;
 	
 	int auxiliar,indice;	
 		
@@ -108,81 +110,75 @@ int main(){
 	setlocale(LC_ALL,"portuguese");
 	
 	int opcao;
-		
-	system("cls");
+	while(1){		
 			
-	printf("BEM-VINDO");
-	printf("\n\nPor gentileza escolha uma opção:");
-	printf("\n1-Preenche o vetor \n2-Ordena o vetor por Bubble Sort ");
-	printf("\n3-Ordena o Vetor por Selection Sort \n4-Desempenho ");
-	printf("\n5-Imprime o vetor \n6-sair\n\nSeleção: ");
-	scanf("%d",&opcao);
-	fflush(stdin);
-		
-	switch(opcao){
-		case 1:
-			preencheVetor();
-			main();
-			break;			
+		system("cls");
 				
-		case 2:
-			bubbleSort();
-			main();
-			break;
+		printf("BEM-VINDO");
+		printf("\n\nPor gentileza escolha uma opção:");
+		printf("\n1-Preenche o vetor \n2-Ordena o vetor por Bubble Sort ");
+		printf("\n3-Ordena o Vetor por Selection Sort \n4-Desempenho ");
+		printf("\n5-Imprime o vetor \n6-sair\n\nSeleção: ");
+		scanf("%d",&opcao);
+		fflush(stdin);
 			
-		case 3:
-			selectionSort();
-			main();
-			break;
-			
-		case 4:
-			opcao =0;
-			printf("\n\nDESEMPENHO");
-			printf("\nPor gentileza selecione uma opção: \n1-Quantidade de comparação \n2-quantidade de trocas \n3-Ambos \n seleção: ");
-			scanf("%d",&opcao);
-			switch(opcao){
-				case 1:
-					printf("\nNumero de comparações: %d\n\n\n",contComparacao);
-					system("pause");
-					main();
-					break;
+		switch(opcao){
+			case 1:
+				preencheVetor();				
+				break;			
 					
-				case 2:
-					printf("\nNumero de trocas: %d\n\n\n",contTroca);
-					system("pause");
-					main();
-					break;
-					
-				case 3:
-					printf("\nNumero de comparações: %d",contComparacao);
-					printf("\nNumero de trocas: %d\n\n\n",contTroca);
-					system("pause");
-					main();
-					break;
+			case 2:
+				bubbleSort();
+				break;
 				
-				default:
-					printf("\nOpção Incorreta!!\n\n\n");
-					system("pause");
-					main();
-					break;
-			}		
-			
-		case 5:
-			imprimeVetor();
-			main();
-			break;
-			
-		case 6:
-			return 0;
-			break;
-			
-		default:
-			printf("\nOpção incorreta, aperte ENTER e digite novamente!!");
-			printf("\n\n\n");
-			system("pause");
-			main();								
-	}	
-	
+			case 3:
+				selectionSort();
+				break;
+				
+			case 4:
+				opcao =0;
+				printf("\n\nDESEMPENHO");
+				printf("\nPor gentileza selecione uma opção: \n1-Quantidade de comparação \n2-quantidade de trocas \n3-Ambos \n seleção: ");
+				scanf("%d",&opcao);
+				switch(opcao){
+					case 1:
+						printf("\nNumero de comparações: %d\n\n\n",contComparacao);
+						system("pause");
+						break;
+						
+					case 2:
+						printf("\nNumero de trocas: %d\n\n\n",contTroca);
+						system("pause");
+						break;
+						
+					case 3:
+						printf("\nNumero de comparações: %d",contComparacao);
+						printf("\nNumero de trocas: %d\n\n\n",contTroca);
+						system("pause");
+						break;
+					
+					default:
+						printf("\nOpção Incorreta!!\n\n\n");
+						system("pause");
+						break;
+				}
+				break;		
+				
+			case 5:
+				imprimeVetor();
+				break;
+				
+			case 6:
+				return 0;
+				break;
+				
+			default:
+				printf("\nOpção incorreta, aperte ENTER e digite novamente!!");
+				printf("\n\n\n");
+				system("pause");
+				break;							
+		}	
+	}
 	
 	return 0;
 }

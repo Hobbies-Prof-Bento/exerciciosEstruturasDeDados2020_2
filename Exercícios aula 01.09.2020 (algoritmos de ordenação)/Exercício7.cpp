@@ -28,7 +28,7 @@ void preencheVetor(){
 		}
 	printf("Operação concluida!!\n\n\n");
 	system("pause");	
-	}
+}
 	
 void imprimeVetor(){
 	printf("\n\nOs valores do vetor são: ");	
@@ -83,8 +83,7 @@ void bubbleSort(){
 	//printf("\n\nclcok %d",tempoProcessamento);	
 	printf("\n\nOperação concluída!!\n\n");
 	printf("\n\n\n\n");
-	system("pause");
-		
+	system("pause");		
 }
 
 void selectionSort(){	
@@ -121,7 +120,6 @@ void selectionSort(){
 	printf("\n\nOperação concluída!!\n\n");
 	printf("\n\n\n\n");
 	system("pause");
-
 }
 
 void insertionSort(){
@@ -198,100 +196,91 @@ int main(){
 	setlocale(LC_ALL,"portuguese");
 	
 	int opcao;
+	while(1){
 		
-	system("cls");
-			
-	printf("BEM-VINDO");
-	printf("\n\nPor gentileza escolha uma opção:");
-	printf("\n1-Preenche o vetor \n2-Ordena o vetor por Bubble Sort ");
-	printf("\n3-Ordena o Vetor por Selection Sort \n4-Ordena o Vetor por Insertion Sort ");
-	printf("\n5-Ordena o Vetor por Shelf Sort");
-	printf("\n6-Desempenho\n7-Imprime o vetor \n8-sair\n\nSeleção: ");
-	scanf("%d",&opcao);
-	fflush(stdin);
-		
-	switch(opcao){
-		case 1:
-			preencheVetor();
-			main();
-			break;			
+		system("cls");
 				
-		case 2:
-			bubbleSort();
-			main();
-			break;
+		printf("BEM-VINDO");
+		printf("\n\nPor gentileza escolha uma opção:");
+		printf("\n1-Preenche o vetor \n2-Ordena o vetor por Bubble Sort ");
+		printf("\n3-Ordena o Vetor por Selection Sort \n4-Ordena o Vetor por Insertion Sort ");
+		printf("\n5-Ordena o Vetor por Shelf Sort");
+		printf("\n6-Desempenho\n7-Imprime o vetor \n8-sair\n\nSeleção: ");
+		scanf("%d",&opcao);
+		fflush(stdin);
 			
-		case 3:
-			selectionSort();
-			main();
-			break;
-			
-		case 4:
-			insertionSort();
-			main();
-			break;
-			
-		case 5:
-			shelfSort();
-			main();
-			break;
-			
-		case 6:
-			opcao =0;
-			printf("\n\nDESEMPENHO");
-			printf("\nPor gentileza selecione uma opção: \n1-Quantidade de comparação ");
-			printf("\n2-quantidade de trocas\n3-Tempo de execução \n4-Ambos \n seleção: ");
-			scanf("%d",&opcao);
-			switch(opcao){
-				case 1:
-					printf("\nNumero de comparações: %d\n\n\n",contComparacao);
-					system("pause");
-					main();
-					break;
+		switch(opcao){
+			case 1:
+				preencheVetor();				
+				break;			
 					
-				case 2:
-					printf("\nNumero de trocas: %d\n\n\n",contTroca);
-					system("pause");
-					main();
-					break;
-					
-				case 3:
-					printf("\nTempo de execução: %d milisegundos\n\n\n",tempoProcessamento);
-					system("pause");
-					main();
-					break;
-					
-				case 4:
-					printf("\nNumero de comparações: %d",contComparacao);
-					printf("\nNumero de trocas: %d",contTroca);
-					printf("\nTempo de execução: %d milisegundos\n\n\n",tempoProcessamento);
-					system("pause");
-					main();
-					break;
+			case 2:
+				bubbleSort();				
+				break;
 				
-				default:
-					printf("\nOpção Incorreta!!\n\n\n");
-					system("pause");
-					main();
-					break;
-			}		
-			
-		case 7:
-			imprimeVetor();
-			main();
-			break;
-			
-		case 8:
-			
-			return 0;
-			break;
-			
-		default:
-			printf("\nOpção incorreta, aperte ENTER e digite novamente!!");
-			printf("\n\n\n");
-			system("pause");
-			main();
-			break;								
-	}	
+			case 3:
+				selectionSort();				
+				break;
+				
+			case 4:
+				insertionSort();				
+				break;
+				
+			case 5:
+				shelfSort();				
+				break;
+				
+			case 6:
+				opcao =0;
+				printf("\n\nDESEMPENHO");
+				printf("\nPor gentileza selecione uma opção: \n1-Quantidade de comparação ");
+				printf("\n2-quantidade de trocas\n3-Tempo de execução \n4-Ambos \n seleção: ");
+				scanf("%d",&opcao);
+				switch(opcao){
+					case 1:
+						printf("\nNumero de comparações: %d\n\n\n",contComparacao);
+						system("pause");						
+						break;
+						
+					case 2:
+						printf("\nNumero de trocas: %d\n\n\n",contTroca);
+						system("pause");						
+						break;
+						
+					case 3:
+						printf("\nTempo de execução: %d milisegundos\n\n\n",tempoProcessamento);
+						system("pause");					
+						break;
+						
+					case 4:
+						printf("\nNumero de comparações: %d",contComparacao);
+						printf("\nNumero de trocas: %d",contTroca);
+						printf("\nTempo de execução: %d milisegundos\n\n\n",tempoProcessamento);
+						system("pause");						
+						break;
+					
+					default:
+						printf("\nOpção Incorreta!!\n\n\n");
+						system("pause");						
+						break;
+				}
+				break;		
+				
+			case 7:
+				imprimeVetor();				
+				break;
+				
+			case 8:
+				
+				return 0;
+				break;
+				
+			default:
+				printf("\nOpção incorreta, aperte ENTER e digite novamente!!");
+				printf("\n\n\n");
+				system("pause");				
+				break;								
+		}
+	}
 	return 0;
 }

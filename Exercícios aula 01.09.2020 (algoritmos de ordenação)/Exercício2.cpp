@@ -64,41 +64,39 @@ int main(){
 	setlocale(LC_ALL,"portuguese");
 	
 	int opcao;
-		
-	system("cls");
-			
-	printf("BEM-VINDO");
-	printf("\n\nPor gentileza escolha uma opção:");
-	printf("\n1-Preenche o vetor \n2-Ordena o vetor por Bubble Sort \n3-Imprime o vetor \n4-sair\n\nSeleção: ");
-	scanf("%d",&opcao);	
-		
-	switch(opcao){
-		case 1:
-			preencheVetor();
-			main();
-			break;			
-				
-		case 2:
-			bubbleSort();
-			main();
-			break;
-			
-		case 3:
-			imprimeVetor();
-			main();
-			break;
-			
-		case 4:
-			return 0;
-			break;
-			
-		default:
-			printf("\nOpção incorreta, aperte ENTER e digite novamente!!");
-			printf("\n\n\n");
-			system("pause");
-			main();								
-	}	
 	
+	while(1){	
+		system("cls");
+				
+		printf("BEM-VINDO");
+		printf("\n\nPor gentileza escolha uma opção:");
+		printf("\n1-Preenche o vetor \n2-Ordena o vetor por Bubble Sort \n3-Imprime o vetor \n4-sair\n\nSeleção: ");
+		scanf("%d",&opcao);	
+			
+		switch(opcao){
+			case 1:
+				preencheVetor();
+				break;			
+					
+			case 2:
+				bubbleSort();
+				break;
+				
+			case 3:
+				imprimeVetor();
+				break;
+				
+			case 4:
+				return 0;
+				break;
+				
+			default:
+				printf("\nOpção incorreta, aperte ENTER e digite novamente!!");
+				printf("\n\n\n");
+				system("pause");
+				break;					
+		}	
+	}
 	
 	return 0;
 }
